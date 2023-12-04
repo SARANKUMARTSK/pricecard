@@ -1,16 +1,13 @@
 import React from 'react'
 
 function Card({data}) {
-  return (
-    <section className="pricing py-5">
-  <div className="container">
-    <div className="row">
-      {/* <!-- Free Tier --> */}
+  return <>
+    
       <div className="col-lg-4">
         <div className="card mb-5 mb-lg-0">
           <div className="card-body">
-            <h5 className="card-title text-muted text-uppercase text-center">Free</h5>
-            <h6 className="card-price text-center">$0<span className="period">/month</span></h6>
+            <h5 className="card-title text-muted text-uppercase text-center">{data.plan}</h5>
+            <h6 className="card-price text-center">{data.price}<span className="period">/month</span></h6>
             <hr/>
             <ul className="fa-ul">
             <li className={data.isUser?"":"text-muted"}><span className="fa-li"><i className={data.isUser?"fas fa-check":"fas fa-times"}></i></span>{data.user}</li>
@@ -28,10 +25,8 @@ function Card({data}) {
           </div>
         </div>
       </div>
-    </div>
-  </div>
-</section>
-  )
+    
+</>
 }
 
 export default Card
